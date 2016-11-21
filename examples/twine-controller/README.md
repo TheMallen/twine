@@ -2,6 +2,17 @@
 If you just want to see an example of this stuff go here
 http://codepen.io/themallen/pen/zoozZX?editors=1010
 
+# Keypath Binding
+To facilitate gradual movement away form evaling code on the dom, function binds are parsed as keypaths and called with `node, context`.
+
+```
+<button data-bind-click="foo"></button>
+
+NOT
+
+<button data-bind-click="foo(this)"></button>
+```
+
 # Controller Binding
 The binding type itself is quite simple, and really only has 4 responsibilities.
 - instantiating an instance of the constructor in the `registry` matching the `data-controller` attribute
